@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مجلة Egy-IC كوميكس - النسخة المصرية</title>
+    <title>مجلة Egy-IC كوميكس - العدد الثاني</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;900&family=Changa:wght@800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -38,11 +38,24 @@
             text-align: center;
             border-bottom: 8px solid var(--comic-black);
             margin-bottom: 25px;
-            background: var(--comic-red);
+            background: var(--comic-blue); 
             color: white;
             padding: 40px 10px;
             border-radius: 5px;
             position: relative;
+        }
+        
+        .issue-number {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--comic-yellow);
+            color: var(--comic-black);
+            padding: 10px 15px;
+            font-weight: 900;
+            border: 4px solid var(--comic-black);
+            transform: rotate(5deg);
+            font-size: 18px;
         }
 
         .comic-title {
@@ -83,11 +96,11 @@
             overflow: hidden;
         }
 
-        .panel-bg-1 { background: #e0f7fa; }
-        .panel-bg-2 { background: #ffe0b2; }
-        .panel-bg-3 { background: #e1bee7; grid-column: 1 / -1; }
-        .panel-bg-4 { background: #ffcdd2; }
-        .panel-bg-5 { background: #c8e6c9; }
+        .panel-bg-1 { background: #ffebee; }
+        .panel-bg-2 { background: #e8eaf6; }
+        .panel-bg-3 { background: #fff8e1; grid-column: 1 / -1; } 
+        .panel-bg-4 { background: #e0f2f1; }
+        .panel-bg-5 { background: #fce4ec; }
 
         .caption {
             background-color: var(--comic-yellow);
@@ -115,27 +128,25 @@
             box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
         }
 
-        .speech-bubble::after {
+        .speech-bubble::after, .speech-bubble::before {
             content: '';
             position: absolute;
-            bottom: -15px;
             left: 50%;
-            border-width: 15px 15px 0 0;
             border-style: solid;
-            border-color: white transparent transparent transparent;
             transform: translateX(-50%);
+        }
+
+        .speech-bubble::after {
+            bottom: -15px;
+            border-width: 15px 15px 0 0;
+            border-color: white transparent transparent transparent;
             z-index: 2;
         }
 
         .speech-bubble::before {
-            content: '';
-            position: absolute;
             bottom: -20px;
-            left: 50%;
             border-width: 19px 19px 0 0;
-            border-style: solid;
             border-color: var(--comic-black) transparent transparent transparent;
-            transform: translateX(-50%);
             z-index: 1;
         }
 
@@ -164,64 +175,65 @@
 
     <div class="comic-page">
         <div class="comic-header">
+            <div class="issue-number">العدد #2</div>
             <h1 class="comic-title">مكافحة العدوى</h1>
-            <div class="comic-subtitle">القواعد المصرية بلمسة كوميدية!</div>
+            <div class="comic-subtitle">فوضى الطوارئ والأقسام الداخلية!</div>
         </div>
 
         <div class="panels-grid">
             
-            <!-- اللمبي -->
+            <!-- كريم عبد العزيز -->
             <div class="panel panel-bg-1">
-                <div class="caption">في العناية المركزة...</div>
+                <div class="caption">انسكابات الدم</div>
                 <div class="speech-bubble">
-                    "بتديله الدوا من غير ما تمسح الوصلة بالكحول 15 ثانية؟! إنت بتستدرج البكتيريا للدم يا لمبي؟!"
+                    "بتمسح الدم اللي على الأرض بالشرشوبة؟ يا عم لازم تغطيه بفوطة وتحط كلور 5000 جزء 10 دقايق.. إنت بتدهن المستشفى بكتيريا؟!"
                 </div>
                 <div class="meme-img-container">
-                    <img src="lemby.jpg" alt="اللمبي" class="meme-img" onerror="this.src='https://placehold.co/400x250?text=مكان+صورة+اللمبي'">
+                    <img src="karim.jpg" alt="كريم عبد العزيز" class="meme-img" onerror="this.src='https://placehold.co/400x250?text=صورة+كريم+أبو+علي'">
                 </div>
             </div>
 
-            <!-- عبلة كامل -->
+            <!-- عادل إمام -->
             <div class="panel panel-bg-2">
-                <div class="caption">خطأ كارثي!</div>
+                <div class="caption">موبايل وجوانتي</div>
                 <div class="speech-bubble">
-                    "يا منجي من المهالك يا رب... الـ 5 لحظات لغسيل الأيدي ضاعوا يا خالتي!"
+                    "الدكتور لسه مغير جرح العيان، ومسك الموبايل بنفس الجوانتي عشان يرد على الواتساب.. الموبايل بقى مزرعة يا زعيم!"
                 </div>
                 <div class="meme-img-container">
-                    <img src="abla.jpg" alt="عبلة كامل" class="meme-img" onerror="this.src='https://placehold.co/400x250?text=مكان+صورة+عبلة+كامل'">
+                    <img src="adel.jpg" alt="عادل إمام" class="meme-img" onerror="this.src='https://placehold.co/400x250?text=صورة+الزعيم'">
                 </div>
             </div>
 
-            <!-- حسن حسني -->
+            <!-- محمد سعد / بوحة -->
             <div class="panel panel-bg-3">
-                <div class="caption">داخل كبسولة العمليات...</div>
+                <div class="caption">في العنابر الداخلية...</div>
                 <div class="speech-bubble" style="transform: rotate(-1deg);">
-                    "الباب مفتوح والضغط الإيجابي ضاع؟ والماسك على دقنك؟ هو إنت خايف على دقنك من العدوى؟ يا فاشل يا فاشل!!"
+                    "بتنفض ملاية السرير كأنك بتنفض سجادة الصالة في العيد؟ العنابر كلها خدت شاور بكتيريا.. تصدق عديتني؟!"
                 </div>
                 <div class="meme-img-container">
-                    <img src="hosny.jpg" alt="حسن حسني" class="meme-img" style="max-height: 300px;" onerror="this.src='https://placehold.co/600x300?text=مكان+صورة+حسن+حسني'">
+                    <img src="boha.jpg" alt="بوحة" class="meme-img" style="max-height: 300px;" onerror="this.src='https://placehold.co/600x300?text=صورة+بوحة'">
                 </div>
             </div>
 
-            <!-- محمد هنيدي -->
+            <!-- باسم سمرة -->
             <div class="panel panel-bg-4">
-                <div class="caption">عند السيفتي بوكس</div>
+                <div class="caption">تحضير الأدوية</div>
                 <div class="speech-bubble">
-                    "السيفتي بوكس بيصرخ ويقولك أنا اتمليت لـ 3/4.. ارحم أمي هتشكنا كلنا!!"
+                    "سايب سن السرنجة مغروز في غطاء الفايل عشان تسحب منه براحتك؟ الفايل اتلوث والتعقيم راح في داهية!"
                 </div>
                 <div class="meme-img-container">
-                    <img src="henedy.jpg" alt="محمد هنيدي" class="meme-img" onerror="this.src='https://placehold.co/400x250?text=مكان+صورة+هنيدي'">
+                    <img src="bassem.jpg" alt="باسم سمرة" class="meme-img" onerror="this.src='https://placehold.co/400x250?text=صورة+باسم+سمرة'">
                 </div>
             </div>
 
-            <!-- أحمد مكي / حزلقوم -->
+            <!-- أحمد حلمي -->
             <div class="panel panel-bg-5">
-                <div class="caption">منطقة محظورة!</div>
+                <div class="caption">فصل النفايات</div>
                 <div class="speech-bubble">
-                    "بيقولك حقل معقم.. يعني تسيب مسافة 30 سم بينك وبينه، مش تسند عليه تاخد ريست يا غالي!"
+                    "سرنجة في الكيس الأسود، وكيس شيبسي في الأحمر، والسيفتي بوكس فيه قطنة.. إحنا بنلخبط الميكروب؟!"
                 </div>
                 <div class="meme-img-container">
-                    <img src="mekky.jpg" alt="حزلقوم" class="meme-img" onerror="this.src='https://placehold.co/400x250?text=مكان+صورة+مكي'">
+                    <img src="helmy.jpg" alt="أحمد حلمي" class="meme-img" onerror="this.src='https://placehold.co/400x250?text=صورة+أحمد+حلمي'">
                 </div>
             </div>
 
@@ -230,7 +242,7 @@
 
 </body>
 </html>
-<!-- زرار الانتقال للعدد الثاني -->
+<!-- زرار الرجوع للعدد الأول -->
         <div style="text-align: center; margin-top: 30px; padding-bottom: 20px; width: 100%;">
-            <a href="issue2.html" style="background: #ffcc00; color: #1a1a1a; text-decoration: none; padding: 10px 30px; font-family: 'Changa', sans-serif; font-size: 24px; border: 4px solid #1a1a1a; border-radius: 8px; box-shadow: 4px 4px 0 #1a1a1a; display: inline-block;">العدد الثاني: الطوارئ ⬅️</a>
+            <a href="index.html" style="background: #e62429; color: white; text-decoration: none; padding: 10px 30px; font-family: 'Changa', sans-serif; font-size: 24px; border: 4px solid #1a1a1a; border-radius: 8px; box-shadow: 4px 4px 0 #1a1a1a; display: inline-block;">➡️ رجوع للعدد الأول: الرعاية</a>
         </div>
